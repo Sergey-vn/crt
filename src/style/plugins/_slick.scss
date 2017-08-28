@@ -1,0 +1,171 @@
+.slider-default {
+  position: relative;
+
+  .slide {
+    outline: none;
+  }
+
+  .slick-dots {
+    position: absolute;
+    @extend .container;
+    margin-left: 0;
+    bottom: 46px;
+    padding-left: 0;
+
+    @include mobile-sm {
+      margin-left: 20px;
+      bottom: 16px;
+    }
+
+    li {
+      list-style: none;
+      display: inline-block;
+      font-size: 0;
+      outline: 0;
+      box-shadow: none;
+      border-radius: 50%;
+      box-sizing: border-box;
+      border: 1.5px solid $grey-text;
+      background: transparent;
+      margin-right: 12px;
+      width: 12px;
+      height: 12px;
+      cursor: pointer;
+
+      button {
+        opacity: 0;
+      }
+
+      &.slick-active {
+        background: $grey-text;
+      }
+    }
+  }
+}
+.hero_slider {
+  position: relative;
+
+  .slick-list {
+    width: 100%!important;
+  }
+
+  .slide {
+    height: 375px;
+    text-align: center;
+    outline: none;
+    padding: 0 20px;
+
+    @include mobile-sm {
+      height: 210px;
+    }
+
+    .container {
+      display: inline-block;
+      height: 100%;
+      background-position: right bottom;
+      background-size: contain;
+      background-repeat: no-repeat;
+      text-align: left;
+
+      @include mobile-sm {
+        background-size: 70%;
+      }
+
+      h3 {
+        font-size: 46px;
+        font-weight: bold;
+        line-height: 54px;
+        margin-top: 55px;
+        margin-bottom: 12px;
+
+        @include mobile-sm {
+          font-size: 28px;
+          line-height: 32px;
+          margin-bottom: 5px;
+          margin-top: 20px;
+        }
+      }
+
+      p {
+        font-size: 30px;
+        line-height: 35px;
+        margin-bottom: 55px;
+        margin-top: 0;
+
+        @include mobile-sm {
+          font-size: 18px;
+          line-height: 22px;
+          margin-bottom: 19px;
+          max-width: 80%;
+        }
+      }
+
+      .btn {
+        height: 44px;
+        line-height: 42px;
+        padding: 0 28px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .slick-dots {
+    margin-left: calc((100% - 1200px)/2);
+
+    @include laptop {
+      margin-left: 40px;
+    }
+  }
+}
+.arrow_slider {
+  padding: 0 40px;
+
+  @include mobile {
+    padding: 0 25px;
+  }
+
+  .slide {
+    outline: none;
+  }
+
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    outline: none;
+
+    &:before {
+      font-size: 34px;
+      font-family: $font-icons;
+      color: $grey-icon;
+
+      @include mobile {
+        font-size: 20px;
+      }
+    }
+
+    &.slick-prev {
+      left:0;
+      @extend .icon-arrow-left;
+
+      @include mobile {
+        left: 10px;
+        padding: 0;
+      }
+    }
+
+    &.slick-next {
+      right:0;
+      @extend .icon-arrow-right;
+
+      @include mobile {
+        right: 10px;
+        padding: 0;
+      }
+    }
+  }
+}

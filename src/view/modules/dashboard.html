@@ -1,0 +1,288 @@
+<div class="breadcrumbs">
+    <div class="container">
+        <a href="./">Главная</a>
+        <a href="javascript:void(0);">Мой кабинет</a>
+    </div>
+</div>
+<div class="manager">
+    <div class="main_bar">
+        <a href="javascript:void(0)">
+            <img src="img/demo/manager.png" alt="">
+            Ваш менеджер
+            <span class="name">Андрей Гонтарев</span>
+        </a>
+    </div>
+    <div class="manager_info">
+        <a href="javascript:void(0)" class="general">
+            <img src="img/demo/manager.png" alt="">
+            <span class="name">Андрей Гонтарев</span>
+            <span class="position">начальник регионального отдела</span>
+        </a>
+        <div class="phone">
+            <i class="icon-phone"></i>
+            <a href="tel:+380445012855">+38 044-501-28-55 <small>(внутренний 173)</small></a>
+            <a href="tel:+380952703546">+38 095-270-35-46</a>
+        </div>
+        <div class="mail">
+            <i class="icon-envelope"></i>
+            <a href="mailto:admin@admin.com">region@karatltd.com.ua</a>
+        </div>
+        <a href="javascript:void(0)" class="btn btn-warning">Свяжитесь со мной</a>
+        <div class="hide_block">скрыть</div>
+    </div>
+</div>
+<div class="container content page_title bg-grey tabs_panel">
+    <h1 id="tabs">
+        <span id="tab1">Личные данные</span>
+        <span id="tab2">Список заказов</span>
+        <span id="tab3">Просмотренные товары</span>
+    </h1>
+</div>
+<div class="container">
+    <div class="full_page dashboard_tabs ">
+        <div id="tab1C" class="main_tab personal_data">
+            <div class="sub_tab general_info" id="sub-tab1S">
+                <div class="grid">
+                    <div class="o-half data">
+                        <ul>
+                            <li>
+                                <div class="key">Фамилия, Имя</div>
+                                <div class="value">Караваев Павел</div>
+                            </li>
+                            <li>
+                                <div class="key">Компания</div>
+                                <div class="value">“Интергал Буд”</div>
+                            </li>
+                            <li>
+                                <div class="key">Должность</div>
+                                <div class="value">Mенеджер по закупкам</div>
+                            </li>
+                            <li>
+                                <div class="key">Телефон</div>
+                                <div class="value">+38 (099) 123 - 45 - 67</div>
+                            </li>
+                            <li>
+                                <div class="key">E-mail</div>
+                                <div class="value">pavel_karavaev@gmail.com</div>
+                            </li>
+                            <li>
+                                <div class="key">Адре для доставок</div>
+                                <div class="value">Киев, Верхний вал, 24 <br> Украинка, Киевская область, Днепровский проспект, 15</div>
+                            </li>
+                            <li>
+                                <div class="key">Время доставки</div>
+                                <div class="value">с 9:00 до 15:00</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="o-half links">
+                        <span class="personal_trigger" id="sub-tab2">Редактировать личные данные</span>
+                        <br>
+                        <span class="personal_trigger" id="sub-tab3">Изменить пароль</span>
+                        <br>
+                        <a href="./" class="link">Выход</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub_tab edit_info" id="sub-tab2S">
+                <div class="grid">
+                    <div class="data editable">
+                        <ul>
+                            <li>
+                                <div class="key">Фамилия</div>
+                                <div class="value"><input type="text" class="form-control" value="Караваев"></div>
+                            </li>
+                            <li>
+                                <div class="key">Имя</div>
+                                <div class="value"><input type="text" class="form-control" value="Павел"></div>
+                            </li>
+                            <li>
+                                <div class="key"> </div>
+                                <div class="value">
+                                    <strong>Представитель компании</strong>
+                                    <a href="javascript:void(0)" class="link">Частное лицо</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="key">Компания</div>
+                                <div class="value"><input type="text" class="form-control" value="Интергал Буд"></div>
+                            </li>
+                            <li>
+                                <div class="key">Должность <small>(опционально)</small></div>
+                                <div class="value"><input type="text" class="form-control" value="Mенеджер по закупкам"></div>
+                            </li>
+                            <li>
+                                <div class="key">Телефон</div>
+                                <div class="value flex_value">
+                                    <input type="text" class="form-control phone-mask" value="+38 (099) 123 - 45 - 67" placeholder="+38 (___) ___-__-__">
+                                    <a href="javascript:void(0)" class="link small add_more" id="add-phone"><small>Еще один</small></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="key">E-mail</div>
+                                <div class="value"><input type="email" class="form-control" value="pavel_karavaev@gmail.com"></div>
+                            </li>
+                            <li>
+                                <div class="key">Адреc для доставок</div>
+                                <div class="value flex_value">
+                                    <div class="address_line">
+                                        Киев, Верхний вал, 24
+                                        <i class="icon-close"></i>
+                                    </div>
+                                    <div class="address_line">
+                                        Украинка, Киевская область, Днепровский проспект, 15
+                                        <i class="icon-close"></i>
+                                    </div>
+                                    <select class="form-control">
+                                        <option value="0">Винница</option>
+                                        <option value="1" selected>Киев</option>
+                                        <option value="2">Одесса</option>
+                                    </select>
+                                    <div class="form-control">
+                                        <input type="text" class="form-control street" placeholder="Улица">
+                                        <input type="text" class="form-control house" placeholder="Дом">
+                                        <input type="text" class="form-control apt" placeholder="Кв.">
+                                    </div>
+                                    <a href="javascript:void(0)" class="link small add_more" id="add-address"><small>Еще один</small></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="key">Время доставки</div>
+                                <div class="value">
+                                    <input type="text" class="form-control time-mask" value="" placeholder="с __:__ до __:__">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sub_tab_action">
+                    <span class="personal_trigger btn btn-warning btn-lg" id="sub-tab1">Сохранить</span>
+                    <span class="personal_trigger btn btn-empty btn-lg" id="sub-tab1"><i class="border">Отмена</i></span>
+                </div>
+            </div>
+
+            <div class="sub_tab password_info" id="sub-tab3S">
+                <div class="grid">
+                    <div class="data editable">
+                        <ul>
+                            <li>
+                                <div class="key">Введите старый пвроль</div>
+                                <div class="value"><input type="password" class="form-control" value=""></div>
+                            </li>
+                            <li>
+                                <div class="key">Придумайте новый пароль</div>
+                                <div class="value"><input type="password" class="form-control" value=""></div>
+                            </li>
+                            <li>
+                                <div class="key">Новый пароль еще раз</div>
+                                <div class="value">
+                                    <input type="password" class="form-control" value="">
+                                    <div class="description">
+                                        Пароль должен быть от 6 до 16 символов, содержать цифры и заглавные буквы и не должен совпадать с именем и эл.почтой
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sub_tab_action">
+                    <span class="personal_trigger btn btn-warning btn-lg" id="sub-tab1">Сохранить</span>
+                    <span class="personal_trigger btn btn-empty btn-lg" id="sub-tab1"><i class="border">Отмена</i></span>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="tab2C" class="main_tab">
+            <ul class="order_list">
+                <li>
+                    <div>№ заказа</div>
+                    <div>Дата оформления</div>
+                    <div>Сумма</div>
+                    <div>Менеджер</div>
+                    <div>Способ доставки</div>
+                    <div>Статус</div>
+                </li>
+                <li>
+                    <div><div class="mobile_title">№ заказа</div><span>73476958</span></div>
+                    <div><div class="mobile_title">Дата оформления</div>25.06.2017</div>
+                    <div><div class="mobile_title">Сумма</div>377,28 грн</div>
+                    <div><div class="mobile_title">Менеджер</div>Андрей Гонтарев</div>
+                    <div><div class="mobile_title">Способ доставки</div>Самовывоз</div>
+                    <div><div class="mobile_title">Статус</div>Отгружен</div>
+                    <div class="details">
+                        <div class="item">
+                            <a href="./product.html" class="image">
+                                <img src="img/product/d2.jpg" alt="">
+                            </a>
+                            <div class="title">
+                                <a href="./product.html" class="name">Бокс КМПн 2/6 на 6 мод. прозр. крышка навесной 140х130х83 IP30</a>
+                                <span>Артикул: 72380</span>
+                            </div>
+                            <div class="quantity">4</div>
+                            <div class="cost">84,32 грн</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div><div class="mobile_title">№ заказа</div><span>73476958</span></div>
+                    <div><div class="mobile_title">Дата оформления</div>25.06.2017</div>
+                    <div><div class="mobile_title">Сумма</div>1059,12 грн</div>
+                    <div><div class="mobile_title">Менеджер</div>Татьяна Скрынник</div>
+                    <div><div class="mobile_title">Способ доставки</div>Самовывоз</div>
+                    <div><div class="mobile_title">Статус</div>Оплачен но неотгружен</div>
+                    <div class="details">
+                        <div class="item">
+                            <a href="./product.html" class="image">
+                                <img src="img/product/d2.jpg" alt="">
+                            </a>
+                            <div class="title">
+                                <a href="./product.html" class="name">Бокс КМПн 2/6 на 6 мод. прозр. крышка навесной 140х130х83 IP30</a>
+                                <span>Артикул: 72380</span>
+                            </div>
+                            <div class="quantity">12</div>
+                            <div class="cost">84,32 грн</div>
+                        </div>
+                        <div class="item">
+                            <a href="./product.html" class="image">
+                                <img src="img/product/d1.jpg" alt="">
+                            </a>
+                            <div class="title">
+                                <a href="./product.html" class="name">LED лампа A60 11W E27 4100K</a>
+                                <span>Артикул: MKP42-N-06-30-09</span>
+                            </div>
+                            <div class="quantity">1</div>
+                            <div class="cost">47,28 грн</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div><div class="mobile_title">№ заказа</div><span>73476958</span></div>
+                    <div><div class="mobile_title">Дата оформления</div>25.06.2017</div>
+                    <div><div class="mobile_title">Сумма</div>189,12 грн</div>
+                    <div><div class="mobile_title">Менеджер</div>Сергей Дядченко</div>
+                    <div><div class="mobile_title">Способ доставки</div>Доставка</div>
+                    <div><div class="mobile_title">Статус</div>Отгружен</div>
+                    <div class="details">
+                        <div class="item">
+                            <a href="./product.html" class="image">
+                                <img src="img/product/d1.jpg" alt="">
+                            </a>
+                            <div class="title">
+                                <a href="./product.html" class="name">LED лампа A60 11W E27 4100K</a>
+                                <span>Артикул: 72380</span>
+                            </div>
+                            <div class="quantity">4</div>
+                            <div class="cost">47,28 грн</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div id="tab3C" class="main_tab">
+            <div class="no_goods">У вас еще нет просмотренных товаров.</div>
+        </div>
+    </div>
+</div>

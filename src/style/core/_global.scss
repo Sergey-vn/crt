@@ -1,0 +1,78 @@
+html, body {
+	font-family: $font-base;
+	min-height: 100vh;
+	position: relative;
+	width: 100%;
+	@include clearfix;
+	max-width: 100%;
+	min-width: 375px;
+	background-color: $grey-bg;
+	overflow-x: hidden;
+	
+	&:after {
+		z-index: 3;
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: $grey-overlay;
+		display: block;
+		transition-duration: 0.15s!important;
+		@extend .fade-out; 
+	}
+
+	&.show_overlay  {
+		&:after {
+			@extend .fade-in;
+		}
+	}
+}
+a {
+	outline: 0;
+}
+main {
+	position: relative;
+	box-sizing: border-box;
+	padding-bottom: 55px;
+}
+.content {
+	padding: 0 30px;
+	background-color: #fff;
+}
+.padding {
+	padding: 18px;
+}
+.hidden {
+	display: none!important;
+}
+.divider {
+	display: block;
+	border: none;
+	width: 100%;
+	margin:0;
+	border-bottom: 1px solid $grey-border;
+}
+.bg-orange {
+	background-color: $orange;
+	color: #fff;
+}
+.bg-green {
+	background-color: $green-light;
+	color: #fff;
+}
+.bg-grey {
+	background-color: #f9f9f9;
+}
+// FADE ANIMATION
+.fade-out {
+	transition: visibility 0.3s, opacity $transition-fast ease-out;
+	opacity: 0;
+	visibility: hidden;
+}
+.fade-in {
+	transition: opacity $transition-fast ease-in;
+	opacity: 1;
+	visibility: visible;
+}

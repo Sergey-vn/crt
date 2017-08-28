@@ -1,0 +1,121 @@
+.sidebar_page {
+
+  .sidebar {
+    .links {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      margin-top: -5px;
+      margin-right: -5px;
+
+      li {
+        padding: 0;
+        margin-bottom: 10px;
+        
+        a {
+          text-decoration: none;
+          color: $black;
+          display: inline-block;
+          padding: 1px 0;
+          
+          &:hover {
+            color: $orange-light;
+          }
+        }
+      }
+    }  
+  }
+
+  &.listing_page {
+
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+
+    }
+
+    @include mobile-sm {
+      display: flex;
+      flex-wrap: wrap;
+
+    }
+
+    &>div {
+      @include tablet {
+        width: 100%;
+        float: none;
+      }
+      @include mobile-sm {
+        width: 100%;
+        float: none;
+      }
+
+      .main_content {
+        @include tablet {
+          border: none;
+        }
+        @include mobile-sm {
+          border: none;
+        }
+      }
+
+      .product_tail {
+        @include tablet {
+          max-width: 50%;
+          border: none;
+          box-shadow: none;
+          border-right: 1px solid $grey-border;
+          border-bottom: 1px solid $grey-border;
+          overflow: hidden!important;
+          margin-bottom: 0;
+          height: auto;
+        }
+        @include mobile-sm {
+          max-width: 100%;
+          border: none;
+          border-bottom: 1px solid $grey-border;
+          overflow: hidden!important;
+          margin-bottom: 0;
+          height: auto;
+        }
+
+        &:nth-child(5n+1) {
+          //border-right: 0;
+        }
+
+        .tail_content {
+          @include mobile-sm {
+            border: none;
+          }
+          
+          .divider {
+            @include tablet {
+              display: none;
+            }
+            @include mobile-sm {
+              display: none;
+            }
+          }
+          
+          .additional_info {
+            @include tablet {
+              display: none;
+            }
+            @include mobile-sm {
+              display: none;
+            }
+          }
+        }
+      }
+
+      &.o-fourth {
+        @include tablet {
+          order: 3;
+        }
+        @include mobile-sm {
+          order: 3;
+        }
+      }
+    }
+  }
+}

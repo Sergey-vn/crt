@@ -1,0 +1,335 @@
+header {
+  background: #fff;
+  height: 76px;
+  box-sizing: border-box;
+  padding: 11px 0;
+  position: relative;
+  z-index: 7;
+
+  @include laptop {
+    padding-right: 50px;
+  }
+
+  @include mobile-sm {
+    padding: 11px 20px;
+    height: 50px;
+  }
+
+  .logo {
+    width: 170px;
+    display: inline-block;
+    margin-top: 2px;
+
+    @include laptop {
+      margin-left: -10px;
+    }
+
+    @include mobile-sm {
+      max-width: 110px;
+      margin-top: -1px;
+    }
+  }
+
+  .contact {
+    float: right;
+    padding-right: 48px;
+    padding-left: 55px;
+    margin-top: -11px;
+    padding-top: 28px;
+    position: relative;
+    right: -29px;
+    margin-left: -10px;
+
+    @include mobile-sm {
+      right: -20px;
+      padding-right: 23px;
+      padding-top: 14px;
+      padding-left: 43px;
+    }
+    
+    .icon-arrow-bottom {
+      @include mobile-sm {
+        display: none;
+      }
+    }
+    
+    .mobile_header {
+      display: none;
+      
+      @include mobile-sm {
+        display: block;
+      }
+      
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .main_contact {
+      position: relative;
+
+      @include mobile {
+        //display: none; //TO DO
+      }
+    }
+    
+    .mobile_phone {
+      text-decoration: none;
+      display: none;
+      
+      @include mobile-sm {
+        display: inline-block;
+        
+        &+i.icon-phone {
+          display: none;
+        }
+      }
+    }
+
+    .icon-phone {
+      font-size: 22px;
+      position: absolute;
+      left: -31px;
+
+      @include mobile-sm {
+        left: -26px;
+      }
+    }
+    
+    .cart, .user {
+      @include mobile-sm {
+        display: inline-block;
+        margin-left: 20px;
+      }
+      
+      span {
+        font-size: 14px;
+        color: #563939;
+        vertical-align: 5px;
+        margin-left: 4px;
+      }
+    }
+
+    .icon-cart, .icon-user {
+      @include mobile-sm {
+        font-size: 22px;
+      }
+    }
+
+    .icon-arrow-bottom {
+      position: absolute;
+      right: -22px;
+      top: 7px;
+      font-size: 7px;
+    }
+
+    .phone {
+      font-size: 16px;
+      letter-spacing: -0.4px;
+      font-weight: bold;
+      text-decoration: none;
+      color: $black!important;
+      
+      @include mobile-sm {
+        display: none;
+        left: 6px;
+      }
+
+      &:hover {
+        @include mobile-sm {
+          display: block;
+          position: absolute;
+        }
+      }
+    }
+
+    .dropdown-content {
+      background-color: rgba(255,255,255, 0.96);
+      left: 0;
+      right: 0;
+      box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+      padding: 50px 26px 21px 54px;
+      z-index: 8;
+
+      @include mobile-sm {
+        padding-right: 10px;
+        padding-left: 50px;
+        padding-top: 35px;
+        display: none!important;
+      }
+
+      .phone {
+        margin-bottom: 7px;
+        display: block;
+
+        @include mobile-sm {
+          left: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      p {
+        font-size: 12px;
+        line-height: 18px;
+        margin-bottom: 0;
+        color: $grey;
+
+        strong {
+          display: block;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: $green;
+        line-height: 18px;
+        font-weight: bold;
+        position: relative;
+        margin-top: 11px;
+        display: block;
+        font-size: 15px;
+
+        i {
+          position: absolute;
+          color: $grey-icon;
+          left: -32px;
+          font-size: 16px;
+          top: 0px;
+        }
+      }
+    }
+
+    &:hover {
+      @media screen and (min-width: 768px) {
+        .main_contact .phone {
+          @include mobile-sm {
+            display: block;
+            position: absolute;
+            width: 120px;
+          }
+        }
+
+        .dropdown-content {
+          display: block;
+
+          .phone {
+            @include mobile-sm {
+              position: relative;
+            }
+          }
+        }
+
+        .icon-arrow-bottom {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .show-contacts {
+      &.main_contact .phone {
+        @include mobile-sm {
+          display: block;
+          position: absolute;
+          width: 120px;
+          z-index: 9;
+        }
+      }
+
+      &~.dropdown-content {
+        display: block!important;
+
+        .phone {
+          @include mobile-sm {
+            position: relative;
+          }
+        }
+      }
+    }
+  }
+
+  nav {
+    float: right;
+    margin-top: 17px;
+    
+    @include laptop {
+      display: none;
+    }
+
+    @include mobile-sm {
+      display: none;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        list-style: none;
+        float: left;
+        margin-left: 31px;
+
+        @include laptop {
+          margin-left: 15px;
+        }
+
+        a {
+          font-size: 16px;
+          line-height: 18px;
+          letter-spacing: -0.4px;
+          color: $black;
+          text-decoration: none;
+        }
+
+        &:first-child{
+          @include laptop {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .language {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 38px;
+
+    @include mobile-sm {
+      display: none;
+    }
+
+    a {
+      display: block;
+      width: 38px;
+      height: 38px;
+      line-height: 37px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      border-top: 1px solid $grey-border;
+      color: $black;
+      text-align: center;
+      background: $grey-bg;
+      box-sizing: border-box;
+
+      &:first-child {
+        border-top: 0;
+      }
+
+      &.active {
+        color: $grey-light;
+        background: $grey-bg!important;
+        cursor: default;
+      }
+
+      &:hover {
+        background: $grey-bg-dark;
+      }
+    }
+  }
+}

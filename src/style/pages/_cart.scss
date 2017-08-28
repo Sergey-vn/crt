@@ -1,0 +1,204 @@
+.cart_page {
+  background: #fff;
+  margin-bottom: 56px;
+}
+.cart_info_bar {
+  background: $green;
+  color: #fff;
+  font-size: 16px;
+  line-height: 26px;
+  padding: 16px 30px 18px;
+
+  @include mobile-sm {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  a {
+    font-weight: bold;
+    color: #fff;
+
+    &.phone {
+      text-decoration: none;
+    }
+  }
+}
+
+.cart_items {
+  margin: 0;
+  padding: 0 49px 0 52px;
+  list-style: none;
+
+  @include mobile-sm {
+    padding: 0 20px;
+  }
+
+  li {
+    position: relative;
+    padding: 17px 160px 17px 103px;
+    border-bottom: 1px solid $grey-border;
+    min-height: 113px;
+    box-sizing: border-box;
+
+    @include mobile-sm {
+      padding: 0;
+    }
+
+    .remove_item {
+      position: absolute;
+      right: 0;
+      font-size: 10px;
+      top: 50%;
+      margin-top: -5px;
+      cursor: pointer;
+
+      @include mobile-sm {
+        top: 20px;
+      }
+    }
+
+    .image {
+      width: 80px;
+      height: 80px;
+      display: flex;
+      position: absolute;
+      left: 0;
+      top: 17px;
+      justify-content: center;
+      align-items: center;
+
+      @include mobile-sm {
+        position: static;
+        display: block;
+        margin: 0 auto;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+    }
+
+    .description {
+      display: flex;
+      flex-wrap: wrap;
+      width: calc(100% - 100px);
+      text-align: left;
+      align-content: center;
+      min-height: 78px;
+      float: left;
+      text-decoration: none;
+
+      @include laptop {
+        width: calc(100% - 10px);
+      }
+
+      @include mobile-sm {
+        display: block;
+        width: 100%;
+        min-height: 0;
+        float: none;
+        text-align: center;
+      }
+
+      .name {
+        display: inline-block;
+        color: $black;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: bold;
+        margin-bottom: 2px;
+      }
+      
+      .code {
+        display: block;
+        width: 100%;
+        color: $grey;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    .counter {
+      min-width: 90px;
+      display: flex;
+      flex-wrap: nowrap;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 160px;
+      height: 40px;
+      line-height: 38px;
+      border: 1px solid #e6e6e6;
+      border-radius: 20px;
+      text-align: center;
+      justify-content: space-between;
+
+      @include laptop {
+        right: 40px;
+      }
+
+      @include mobile-sm {
+        position: static;
+        transform: none;
+        width: 150px;
+        margin: 20px auto;
+      }
+
+      .value {
+        font-size: 16px;
+        font-weight: bold;
+        color: $black;
+        min-width: 20px;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        background: none;
+        display: inline-block;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .icon-plus {
+        font-size: 11px;
+        color: #a5a5a5;
+        float: right;
+        margin-right: 12px;
+        margin-left: 10px;
+        display: inline-block;
+        cursor: pointer;
+
+        &:before {
+          line-height: 40px;
+        }
+      }
+      
+      .icon-minus {
+        color: #a5a5a5;
+        font-size:2px;
+        margin-left: 14px;
+        margin-right: 12px;
+        display: inline-block;
+        float: left;
+        cursor: pointer;
+
+        &:before {
+          line-height: 40px;
+        }
+      }
+    }
+  }
+}
+
+.cart_actions {
+  padding-top: 32px;
+  padding-bottom: 44px;
+  text-align: center;
+
+  .btn {
+    margin: 0 8px;
+    @include mobile-sm {
+      margin-top: 20px;
+    }
+  }
+}

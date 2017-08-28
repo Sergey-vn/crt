@@ -1,0 +1,282 @@
+.white-popup {
+  position: relative;
+  background: #FFF;
+  width:auto;
+  max-width: 400px;
+  margin: 0 auto;
+
+  .mfp-close {
+    font-size: 0;
+    font-family: $font-icons;
+    @extend .icon-close;
+    opacity: 1;
+    top: 7px;
+    right: 8px;
+
+    @include mobile-sm {
+      right: 4px;
+    }
+
+    &:before {
+      font-size: 20px;
+      color: $black;
+    }
+  }
+
+  .popup-header {
+    padding: 18px 50px 20px;
+    font-size: 20px;
+    line-height: 22px;
+    color: $black;
+    border-bottom: 1px solid $grey-border;
+    font-weight: bold;
+
+    @include mobile-sm {
+      padding: 18px 20px 20px;
+    }
+  }
+
+  .popup-content {
+    padding: 30px 50px;
+
+    &.full-width {
+      padding: 0;
+    }
+  }
+
+  &.cart_popup {
+    max-width: 895px;
+
+    .popup-header {
+      padding-left: 30px;
+      padding-right: 30px;
+
+      @include mobile-sm {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
+    .cart_info_bar {
+      margin-top: -1px;
+    }
+
+    .cart_actions {
+      padding-bottom: 40px;
+    }
+  }
+
+  &.login_popup {
+    max-width: 625px;
+
+    .form-group {
+      margin-left: 0!important;
+    }
+  }
+
+  &.register_popup {
+    max-width: 912px;
+
+    .account {
+
+      @include laptop {
+        margin: 0;
+      }
+
+      &>div {
+        @include clearfix;
+      }
+
+      .form-group {
+        @include laptop {
+          width: calc((100% - 16px)/2);
+        }
+
+        input, .select2 {
+          @include laptop {
+            width: 100%!important;
+          }
+        }
+      }
+    }
+  }
+
+  .sign {
+    display: flex;
+    flex-wrap: nowrap;
+
+    @include mobile-sm {
+      flex-wrap: wrap;
+    }
+
+    .account {
+      padding-right: 40px;
+      margin-right: 40px;
+      box-sizing: border-box;
+      border-right: 1px solid $grey-border;
+      padding-bottom: 5px;
+      max-width: calc(100% - 215px);
+
+      @include mobile-sm {
+        max-width: 100%;
+        margin-right: 0;
+        padding-right: 0;
+        border: none;
+        width: 100%;
+      }
+
+      .form-group {
+        @include mobile-sm {
+          width: 100%;
+        }
+        .form-control {
+          @include mobile-sm {
+            width: 100%;
+          }
+        }
+      }
+
+      .link {
+        margin-top: -8px;
+        margin-bottom: 20px;
+
+        a {
+          display: inline-block;
+          font-size: 14px;
+          line-height: 20px;
+          color: $grey;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+      .custom-checkbox {
+        margin-right: 5px;
+        vertical-align: -5px;
+      }
+
+      .btn {
+        float: right;
+        padding-right: 35px;
+        padding-left: 35px;
+      }
+
+      &>.btn-warning {
+
+
+        @include mobile-sm {
+          float: none;
+          margin: 0 auto;
+          display: block;
+          width: auto;
+          text-align: center;
+        }
+      }
+
+      .actions {
+        min-height: 40px;
+        font-size: 14px;
+        line-height: 20px;
+
+        label {
+          display: inline-block;
+          min-height: 40px;
+          line-height: 40px;
+          cursor: pointer;
+        }
+      }
+      pre {
+        font-size: 14px;
+        display: inline-block;
+        color: #6b6b6b;
+        font-weight: normal;
+        margin: 0 0 0 5px;
+        vertical-align: bottom;
+        line-height: 20px;
+      }
+    }
+
+    .social {
+      position: relative;
+      width: 170px;
+
+      @include mobile-sm {
+        width: 100%;
+        margin-top: 30px;
+      }
+
+      .title {
+        text-align: center;
+        display: block;
+      }
+      .link {
+        color: $green;
+        font-size: 14px;
+        line-height: 20px;
+        position: absolute;
+        bottom: 17px;
+        left: 0;
+        font-weight: bold;
+        text-decoration: none;
+
+        @include mobile-sm {
+          position: relative;
+          bottom: 0;
+        }
+      }
+      
+      .btn {
+        width: 100%;
+        margin-bottom: 16px;
+        text-align: center;
+        position: relative;
+        font-size: 16px;
+        
+        i {
+          position: absolute;
+          left: 19px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: #fff;
+        }
+      }
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+      display: block;
+      float: left;
+      margin-left: 16px;
+
+      @include mobile-sm {
+        margin-left: 0;
+        margin-bottom: 13px;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      .form-control {
+        width: 270px;
+        border: 1px solid $grey-border;
+        border-radius: 20px;
+      }
+    }
+
+    .title {
+      font-size: 16px;
+      color: $black;
+      line-height: 20px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      display: inline-block;
+
+      @include mobile-sm {
+        margin-bottom: 8px;
+      }
+    }
+  }
+}

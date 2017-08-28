@@ -1,0 +1,356 @@
+.catalog {
+  .o-fourth, .t-fourth, .o-third, .t-third {
+    @include mobile-sm {
+      width: 100%;
+      border-bottom: 1px solid $grey-border;
+    }
+  }
+
+  .o-fourth {
+    @include laptop {
+      width: 100%;
+      border-bottom: 1px solid $grey-border;
+      padding-bottom: 10px;
+    }
+  }
+
+  .t-fourth {
+    @include laptop {
+      width: 100%;
+    }
+  }
+  .sidebar {
+    padding: 0;
+    position: relative;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+
+        a {
+          display: block;
+          position: relative;
+          padding: 10px 45px 10px 32px;
+          font-size: 16px;
+          line-height: 22px;
+          color: $black;
+          text-decoration: none;
+
+          &:before {
+            display: block;
+            position: absolute;
+            font-size: 10px;
+            color: $grey-text;
+            font-weight: normal;
+            right: 24px;
+            top: 55%;
+            transform: translateY(-50%);
+            font-family: $font-icons;
+            @extend .icon-arrow-right;
+          }
+        }
+
+        ul {
+          display: none;
+          position: absolute;
+          left: 300px;
+          top: 0;
+          background: $grey-bg-dark;
+          box-shadow: 4px 4px 6px 0 rgba(0, 0, 0, 0.09);
+          padding: 14px 28px 17px 32px;
+          width: 436px;
+          box-sizing: border-box;
+          z-index: 4;
+
+          @include mobile-sm {
+            //display: none!important;
+          }
+        }
+
+        &:hover {
+          @media (min-width: 768px) { //hotfix mobile tap issue related with hover
+            a {
+              font-weight: bold;
+              background: $grey-bg-dark;
+
+              @include mobile-sm {
+                font-weight: normal;
+                background: #fff;
+              }
+
+              &:before {
+                color: $grey;
+
+                @include mobile-sm {
+                  color: $grey-text;
+                }
+              }
+            }
+            ul {
+              display: block;
+
+              @include mobile-sm {
+                display: none;
+              }
+
+              li {
+                a {
+                  font-weight: normal;
+                  line-height: 36px;
+                  font-size: 16px;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                  padding: 0;
+
+                  @include mobile-sm {
+                    white-space: normal;
+                    line-height: 20px;
+                    margin-bottom: 10px;
+                  }
+
+                  &:before {
+                    display: none;
+                  }
+
+                  &:hover {
+                    color: $orange-light;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .active {
+          @include mobile-sm {
+            font-weight: bold!important;
+            background: $grey-bg-dark!important;
+
+
+            &:before {
+              width: 20px;
+              height: 20px;
+              text-align: center;
+              transform-origin: 17px 9px;
+            }
+          }
+
+
+          &:before {
+            @include mobile {
+              transform: rotate(90deg)!important;
+            }
+          }
+
+          & + ul {
+            @include mobile-sm {
+              display: block;
+              position: relative;
+              left: 0;
+              right: 0;
+              width: auto;
+              top:0;
+              box-shadow: none;
+              border-top: 1px solid $grey-border;
+              border-bottom: 1px solid $grey-border;
+              overflow: hidden;
+              padding-bottom: 10px;
+              margin-bottom: 10px;
+            
+              &>a {
+                background: $grey-bg-dark;
+
+                &:before {
+                  width: 20px;
+                  height: 20px;
+                  text-align: center;
+                  transform-origin: 14px 5px;
+                }
+              }
+
+              li {
+                a {
+                  font-weight: normal;
+                  line-height: 36px;
+                  font-size: 16px;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                  padding: 0;
+
+                  @include mobile-sm {
+                    white-space: normal;
+                    line-height: 20px;
+                    margin-bottom: 10px;
+                  }
+
+                  &:before {
+                    display: none;
+                  }
+
+                  &:hover {
+                    color: $orange-light;
+                  }
+                }
+              }
+            }
+
+          }
+        }
+
+        &:first-child a {
+          padding-top: 14px;
+        }
+      }
+    }
+  }
+
+  .sticker {
+    position: absolute;
+    top: 26px;
+    left: 27px;
+    font-size: 15px;
+    line-height: 22px;
+    padding: 3px 14px 5px 12px;
+  }
+
+  .main_content {
+    .product {
+
+      .product_name {
+        display: block;
+        color: $black;
+        text-decoration: none;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+      .subcategory {
+        color: $black;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 5px;
+        display: block;
+      }
+      .code {
+        font-size: 14px;
+        line-height: 20px;
+        color: #828181;
+        margin-bottom: 30px;
+      }
+    }
+    .slider {
+      height: 571px;
+      border-right: 1px solid $grey-border;
+
+      .slick-dots {
+        bottom: 29px;
+        text-align: center;
+      }
+
+      .slide {
+        height: 571px;
+        padding: 0 30px;
+
+        .product {
+          height: 100%;
+          border: none;
+          padding-top: 40px;
+          position: relative;
+
+          .sticker {
+            left: -3px;
+          }
+
+          .image {
+            width: 234px;
+            height: 234px;
+            padding-bottom: 10px;
+            padding-top: 28px;
+            margin: 0 auto;
+            display: block;
+            text-align: center;
+
+            @include laptop {
+              width: 100%;
+              max-width: 234px;
+              height: auto;
+              margin-bottom: 30px;
+            }
+
+            img {
+              max-width: 100%;
+              max-height: 208px;
+              vertical-align: bottom;
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+    .product.tail {
+      height: 286px;
+      box-sizing: border-box;
+      border-bottom: 1px solid $grey-border;
+      position: relative;
+      @include clearfix;
+
+      @include mobile-sm {
+        height: auto;
+      }
+
+      .image {
+        width: 200px;
+        height: 196px;
+        text-align: center;
+        margin: 45px 52px 0 30px;
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include mobile-sm {
+          width: 100%;
+          margin-left: 0;
+        }
+
+        @include tablet {
+          width: 130px!important;
+        }
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+
+      .description {
+        float: left;
+        width: calc(100% - 300px);
+        padding-top:60px;
+
+        @include mobile-sm {
+          width: 100%;
+          box-sizing: border-box;
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-bottom: 20px;
+          padding-top: 30px;
+        }
+
+        @include tablet {
+          width: calc(100% - 240px);
+        }
+      }
+
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+}

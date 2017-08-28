@@ -1,0 +1,43 @@
+.grid {
+	@include clearfix;
+
+	[class^="o-"], [class^="t-"] {
+		float: left;
+		box-sizing: border-box;
+	}
+	
+	.o-half {
+		width: 50%;
+	}
+
+	.o-third {
+		width: calc(100% / 3);
+	}
+
+	.o-fourth {
+		width: 25%;
+	}
+
+	.t-fourth {
+		width: 75%;
+	}
+	.t-third {
+		width: calc((100% / 3)*2);
+	}
+}
+.container {
+	max-width: $desktop;
+	margin: 0 auto;
+	width: 100%;
+	box-sizing: border-box;
+
+	@include laptop {
+		width: calc(100% - 80px);
+	}
+
+	.container {
+		@include laptop {
+			width: 100%;
+		}
+	}
+}

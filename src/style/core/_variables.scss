@@ -1,0 +1,39 @@
+/*---- FONTS ----*/
+$font-base    		    : 			'PT Sans', sans-serif;
+$font-icons    		    : 			'icomoon';
+
+/*---- COLORS ----*/
+$black                :       #313131;
+$black-bg             :       #191919;
+$black-bg-light       :       #212121;
+
+$grey                 :       #7e7e7e;
+$grey-text            :       #cecece;
+$grey-bg              :       #F2F2F2;
+$grey-bg-dark         :       #f6f6f6;
+$grey-icon            :       #a5a5a5;
+$grey-border          :       #e2e2e2;
+$grey-overlay         :       rgba(213,213,213,0.6);
+$grey-light           :       #bababa;
+$grey-menu-bg         :       #F8F8F8;
+// и тут я устал добавлять переменные для серго цвета, количество оттенков в палитре дизайнера не знает предела, хочется плакать
+
+$red                  :       #f4511e;
+$blue                 :       #39589c;
+$blue-light           :       #36b3e7;
+$yellow               :       #fee309;
+$yellow-dark          :       #e2b500;
+$orange               :       #ff6000;
+$orange-light         :       #ff7300;
+$green  				      :			  #1da240;
+$green-medium         :       #3fc060;
+$green-light          :       #4BB466;
+
+/*---- EFFECTS ----*/
+$transition-base		  : 			0.5s;
+$transition-fast		  : 			0.33s;
+
+/*---- SCREENS ----*/
+$desktop	            : 			1200px;
+
+

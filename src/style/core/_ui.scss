@@ -1,0 +1,440 @@
+//.form-control
+.form-control {
+  border: none;
+  //border-radius: $border-radius-base;
+  outline: none;
+  box-shadow: none;
+  //background: $grey-lighter;
+  //color: $text-color;
+  //padding: 11px 22px 11px 22px;
+  box-sizing: border-box;
+  //height: 64px;
+  font-size: 16px;
+  line-height: 41px;
+  color: $black;
+  padding: 9px 22px 8px 22px;
+  height: 40px;
+  display: block;
+  width: 100%;
+  //border-bottom: 1px solid $border-color;
+  //transition: $transition-fast;
+  //font-weight: $font-weight-thin;
+
+
+  /*&.input-lg {
+    height:48px;
+    padding-left: 21px;
+  }*/
+
+  &.bordered {
+    border: 1px solid $grey-border;
+  }
+  &.rounded {
+    border-radius: 40px;
+  }
+  &:focus {
+   // border-bottom: 1px solid $green-light;
+  }
+
+  &:-ms-input-placeholder {
+    color: $grey-icon;
+    font-size: 16px;
+    line-height: 40px;
+  }
+
+  &::-moz-placeholder {
+    color: $grey-icon;
+    font-size: 16px;
+    line-height: 40px;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $grey-icon;
+    font-size: 16px;
+    line-height: 40px;
+  }
+
+  @include mobile () {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    &:-ms-input-placeholder {
+      //line-height: 20px;
+    }
+
+    &::-moz-placeholder {
+      //line-height: 20px;
+    }
+
+    &::-webkit-input-placeholder {
+      //line-height: 20px;
+    }
+  }
+}
+.form-group {
+  position: relative;
+  margin-bottom: 16px;
+
+  &.center {
+    text-align: center;
+  }
+
+  .form-control.input-validation-error {
+    outline: none;
+    box-shadow: none;
+    //background: $red-lighter;
+    border-color: red;
+  }
+
+  .field-validation-error {
+    //position: absolute;
+    display: block;
+    font-size: 15px;
+    padding-top: 5px;
+    left: 0;
+    color: red;
+    //font-size: $font-size-small;
+    //font-weight: $font-weight-thin;
+    //bottom: -5px;
+    margin: 0;
+    white-space: nowrap;
+    margin-bottom: -11px;
+  }
+}
+.text-danger {
+  color: red;
+}
+//.btn
+.btn {
+  outline: none;
+  text-decoration: none;
+  box-shadow: none;
+  border: 1px solid transparent;
+  height: 40px;
+  line-height: 37px;
+  padding: 0px 22px 0px 23px;
+  border-radius: 100px;
+  text-transform: none;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: $font-base;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  transition: all .15s ease-out 0s;
+  color: $black;
+  appearance: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  z-index: 2;
+
+  &:hover, &:active, &:focus, &:active:focus  {
+    outline: none;
+    box-shadow: none;
+    border-color: transparent;
+    text-decoration: none;
+  }
+
+  &.disabled {
+    //background: $grey;
+  }
+
+  //sizes
+  &.btn-lg {
+    height: 56px;
+    padding: 0 40px;
+    line-height: 55px;
+    font-size: 20px;
+    font-weight: bold;
+
+  }
+  &.btn-sm {
+    height: 32px;
+    padding: 0 19px;
+    line-height:31px;
+    //font-size: $font-size-smallest;
+    //font-family: $font-family-base;
+    //font-weight: $font-weight-thin;
+  }
+
+  //colors
+  &.btn-primary, &.btn-primary:active:focus {
+    //background: $rose;
+    color: #fff;
+
+    &:active, &:focus, &:active:focus {
+      //background: $rose;
+      color: #fff;
+    }
+
+    &:hover {
+      //background: $rose-light!important;
+    }
+  }
+  &.btn-warning, &.btn-warning:active:focus {
+    background: $yellow;
+    color: $black;
+
+    &:active, &:focus, &:active:focus {
+      background: $yellow;
+      color: $black;
+    }
+
+    &.btn-lg {
+      box-shadow: 0 3px 0 0 #e2b500;
+
+      &:hover {
+        //background: $yellow-dark!important;
+        box-shadow: 0 0 0 0 #e2b500;
+      }
+    }
+  }
+
+  &.btn-success, &.btn-success:active:focus {
+    background: $green-medium;
+    color: #fff;
+
+    &:active, &:focus, &:active:focus {
+      background: $green-medium;
+      color: #fff;
+    }
+
+    &.btn-lg {
+      box-shadow: 0 3px 0 0 $green;
+
+      &:hover {
+        //background: $yellow-dark!important;
+        box-shadow: 0 0 0 0 $green;
+      }
+    }
+  }
+
+  &.btn-info, &.btn-info:active:focus {
+     background: $blue;
+     color: #fff;
+
+     &:active, &:focus, &:active:focus {
+       background: $blue;
+       color: #fff;
+     }
+
+     &.btn-lg {
+       box-shadow: 0 3px 0 0 $green;
+
+       &:hover {
+         //background: $yellow-dark!important;
+         box-shadow: 0 0 0 0 $green;
+       }
+     }
+   }
+
+  &.btn-danger, &.btn-danger:active:focus {
+    background: $red;
+    color: #fff;
+
+    &:active, &:focus, &:active:focus {
+      background: $red;
+      color: #fff;
+    }
+
+    &.btn-lg {
+      box-shadow: 0 3px 0 0 $green;
+
+      &:hover {
+        //background: $yellow-dark!important;
+        box-shadow: 0 0 0 0 $green;
+      }
+    }
+  }
+
+
+  &.btn-empty, &.btn-empty:active:focus {
+    background: transparent;
+    color: #fff;
+    border-color: #fff;
+
+    &:active, &:focus, &:active:focus {
+      background: transparent;
+      color: #fff;
+    }
+
+    &:hover {
+      background-color: hsla(0,0%,100%,.5)!important;
+    }
+  }
+
+  /*&.btn-success, &.btn-success:active:focus {
+    background: $green;
+    color: #fff;
+
+    &:active, &:focus, &:active:focus {
+      background: $green;
+      color: #fff;
+    }
+
+    &:hover {
+      background: $green-light!important;
+    }
+  }*/
+
+  &.btn-default {
+    //color: $rose;
+    background: #fff;
+    //border-color: $rose;
+
+    &:active, &:focus, &:active:focus {
+      //color: $rose;
+      background: #fff;
+      //border: 1px solid $rose;
+    }
+
+    &:hover {
+      //background: $rose-lighter!important;
+      //color: $rose!important;
+    }
+  }
+
+  /*&.btn-info, &.btn-info:active:focus {
+    background: $blue;
+    border: none;
+
+    &:active, &:focus, &:active:focus {
+      background: $blue;
+    }
+
+    &:hover {
+      background: $blue-light!important;
+    }
+  }*/
+}
+
+//Dropdowns
+.dropdown {
+  position: relative;
+
+  .dropdown-switcher {
+    position: relative;
+    z-index: 9;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    z-index: 2;
+  }
+
+  &.overlayed {
+    .dropdown-content {
+      top: 0;
+    }
+  }
+
+  &:hover {
+    .dropdown-content {
+      display: block;
+    }
+  }
+}
+
+//custom-checkbox
+.custom-checkbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+
+  input {
+    display: none;
+
+    &:checked {
+      &~.fake-checkbox {
+        background: $green;
+        border-color: $green;
+      }
+    }
+  }
+  .fake-checkbox {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: -4px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    transition: $transition-fast;
+    border: 1px solid $grey-text;
+    color: #fff;
+    font-size: 9px;
+    text-align: center;
+    text-indent: 2px;
+    font-family: $font-icons;
+    @extend .icon-check;
+
+    &:before {
+      vertical-align: 10px;
+      line-height: 0;
+    }
+  }
+}
+
+//select2
+.select2 {
+  @extend .form-control;
+  padding: 0;
+
+  .select2-selection {
+    @extend .form-control;
+    border:  none!important;
+    line-height: 10px;
+    padding-top: 4px;
+    padding-bottom: 0;
+    background: transparent;
+
+    .select2-selection__rendered {
+      padding-left: 0;
+    }
+
+    .select2-selection__arrow {
+      top: 5px;
+      right: 10px;
+
+      b {
+        border: none;
+        font-family: $font-icons;
+        color: $grey;
+        @extend .icon-arrow-bottom;
+        font-size: 7px;
+        font-weight: normal;
+      }
+    }
+  }
+
+  &.select2-container--open {
+    border-radius: 20px 20px 0 0!important;
+  }
+}
+.select2-dropdown {
+  border-color: $grey-border;
+
+  .select2-search {
+    display: none;
+  }
+  .select2-results {
+
+    li {
+      color: $black!important;
+      padding: 6px 22px;
+
+      &[aria-selected="true"] {
+        background: transparent!important;
+        font-weight: bold;
+      }
+
+      &.select2-results__option--highlighted {
+        background: #fafafa!important;
+      }
+    }
+  }
+}
